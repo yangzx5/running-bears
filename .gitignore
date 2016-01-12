@@ -45,3 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# Ignore files built by Webstorm
+.idea/
+
+# Ignore files built by Cocos Code IDE
+.settings/
+.metadata/
+
+# Ignore files built by Visual Studio
+frameworks/
+runtime/
+tools/
