@@ -1,16 +1,14 @@
-
 var HelloWorldLayer = cc.Layer.extend({
     sprite:null,
     ctor:function () {
         //////////////////////////////
         // 1. super init first
         this._super();
-
+        var size = data.winSize;
         /////////////////////////////
         // 2. add a menu item with "X" image, which is clicked to quit the program
         //    you may modify it.
-        // ask the window size
-        var size = cc.director.getWinSize();
+
         //var bear1_2 = ccs.load(res.Bear1_2_json);
         //var node = bear1_2.node;
         //var action = bear1_2.action;
@@ -27,6 +25,10 @@ var HelloWorldLayer = cc.Layer.extend({
         sprite.x = size.width/2;
         sprite.y = size.height/2;
         this.addChild(sprite);
+
+        var contentSize = sprite.getContentSize();
+        var scaleFactor = data.spriteSize.BEAR.WIDTH/contentSize.width;
+        sprite.scale = scaleFactor;
 
         var animation = new cc.Animation();
         for(var i=0;i<6;i++)
