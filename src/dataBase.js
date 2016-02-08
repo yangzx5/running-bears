@@ -4,14 +4,16 @@
 
 const WIDTH_UNITS = 192;
 const SpriteSize ={
-    BEAR : {
-        WIDTH : 12.0,
-        HEIGHT : 10.0
-    },
-    FRUIT : {
-        WIDTH : 6.0,
-        HEIGHT : 4.0
-    }
+    PEAR_WIDTH : 6.0,
+    APPLE_WIDTH : 6.0,
+    BANANA_WIDTH : 6.0,
+    MELON_WIDTH : 6.0,
+    SQUIRREL_WIDTH : 12.0,
+    MONKEY_WIDTH : 12.0,
+    SMALL_TWO_WIDTH : 12.0,
+    SMALL_ONE_WIDTH : 12.0,
+    BIG_TWO_WIDTH : 12.0,
+    BIG_ONE_WIDTH : 12.0
 };
 const USING_DEFAULT_SPEED = true;
 const DEFAULT_QUIET_SPEED = 25.0;

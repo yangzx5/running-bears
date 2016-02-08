@@ -27,7 +27,7 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(sprite);
 
         var contentSize = sprite.getContentSize();
-        var scaleFactor = data.spriteSize.BEAR.WIDTH/contentSize.width;
+        var scaleFactor = data.spriteSize.BIG_ONE_WIDTH/contentSize.width;
         sprite.scale = scaleFactor;
 
         var animation = new cc.Animation();
