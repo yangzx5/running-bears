@@ -19,7 +19,8 @@ var DataAccessLayer = cc.Class.extend({
     damage : null,
     scoreConsumption : null,
     requiredRank : null,
-    ctor : function(spriteSize,quietSpeed,normalSpeed,mediumSpeed,hardSpeed,emergenceNumberPerUnitTime,hangTime,score,hp,captureProbability,damage,scoreConsumption,requiredRank) {
+    netSpeed : null,
+    ctor : function(spriteSize,quietSpeed,normalSpeed,mediumSpeed,hardSpeed,emergenceNumberPerUnitTime,hangTime,score,hp,captureProbability,damage,scoreConsumption,requiredRank,netSpeed) {
         this.winSize = cc.director.getWinSize();
         this.pixelsPerUnit = this.winSize.width/WIDTH_UNITS;
         this.winSizeInUnits = {
@@ -39,6 +40,7 @@ var DataAccessLayer = cc.Class.extend({
         this.damage = this.deepCopy(damage);
         this.scoreConsumption = this.deepCopy(scoreConsumption);
         this.requiredRank = this.deepCopy(requiredRank);
+        this.netSpeed = this.unitsToPixels(netSpeed);
     },
     deepCopy : function(source){
         var result={};
@@ -58,6 +60,6 @@ var DataAccessLayer = cc.Class.extend({
 
 var data = null;
 if (USING_DEFAULT_SPEED)
-    data = new DataAccessLayer(SpriteSize,QuietSpeed.DEFAULT,NormalSpeed.DEFAULT,MediumSpeed.DEFAULT,HardSpeed.DEFAULT,EmergenceNumberPerUnitTime,HangTime,Score,Hp,CaptureProbability,Damage,ScoreConsumption,RequiredRank);
+    data = new DataAccessLayer(SpriteSize,QuietSpeed.DEFAULT,NormalSpeed.DEFAULT,MediumSpeed.DEFAULT,HardSpeed.DEFAULT,EmergenceNumberPerUnitTime,HangTime,Score,Hp,CaptureProbability,Damage,ScoreConsumption,RequiredRank,NetSpeed);
 else
-    data = new DataAccessLayer(SpriteSize,QuietSpeed.SETTING,NormalSpeed.SETTING,MediumSpeed.SETTING,HardSpeed.SETTING,EmergenceNumberPerUnitTime,HangTime,Score,Hp,CaptureProbability,Damage,ScoreConsumption,RequiredRank);
+    data = new DataAccessLayer(SpriteSize,QuietSpeed.SETTING,NormalSpeed.SETTING,MediumSpeed.SETTING,HardSpeed.SETTING,EmergenceNumberPerUnitTime,HangTime,Score,Hp,CaptureProbability,Damage,ScoreConsumption,RequiredRank,NetSpeed);

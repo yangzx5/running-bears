@@ -358,3 +358,8 @@ const RequiredRank = {
     MEDIUM_NET : 2,
     LARGE_NET : 4
 };
+const NetSpeed = {
+    SMALL_NET : 150.0,
+    MEDIUM_NET : 150.0,
+    LARGE_NET : 150.0
+};
