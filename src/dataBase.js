@@ -2,7 +2,9 @@
  * Created by Administrator on 2016/2/7 0007.
  */
 
+// the width of the window in units
 const WIDTH_UNITS = 192;
+// the size of all the preys (sprites)
 const SpriteSize ={
     PEAR_WIDTH : 6.0,
     APPLE_WIDTH : 6.0,
@@ -15,11 +17,17 @@ const SpriteSize ={
     BIG_TWO_WIDTH : 12.0,
     BIG_ONE_WIDTH : 12.0
 };
+// whether we use the same speed in different preys
 const USING_DEFAULT_SPEED = true;
+// the same speed of the prey in quiet scenario
 const DEFAULT_QUIET_SPEED = 25.0;
+// the same speed of the prey in normal scenario
 const DEFAULT_NORMAL_SPEED = 50.0;
+// the same speed of the prey in medium scenario
 const DEFAULT_MEDIUM_SPEED = 100.0;
+// the same speed of the prey in hard scenario
 const DEFAULT_HARD_SPEED = 200.0;
+// the speed of preys in quiet scenario
 const QuietSpeed = {
     DEFAULT : {
         PEAR : DEFAULT_QUIET_SPEED,
@@ -46,6 +54,7 @@ const QuietSpeed = {
         BIG_ONE : 25.0
     }
 };
+// the speed of preys in normal scenario
 const NormalSpeed = {
     DEFAULT : {
         PEAR : DEFAULT_NORMAL_SPEED,
@@ -72,6 +81,7 @@ const NormalSpeed = {
         BIG_ONE : 50.0
     }
 };
+// the speed of preys in medium scenario
 const MediumSpeed = {
     DEFAULT : {
         PEAR : DEFAULT_MEDIUM_SPEED,
@@ -98,6 +108,7 @@ const MediumSpeed = {
         BIG_ONE : 100.0
     }
 };
+// the speed of preys in hard scenario
 const HardSpeed = {
     DEFAULT : {
         PEAR : DEFAULT_HARD_SPEED,
@@ -124,6 +135,7 @@ const HardSpeed = {
         BIG_ONE : 200.0
     }
 };
+// the emergence number of preys in one unit time in different scenarios
 const EmergenceNumberPerUnitTime = {
     Quiet : {
         FRUIT : 12,
@@ -300,6 +312,7 @@ const EmergenceNumberPerUnitTime = {
         }
     }
 };
+// the hang time of the fruits in the trees
 const HangTime = {
     //ms
     PEAR : 30,
@@ -307,6 +320,7 @@ const HangTime = {
     BANANA : 20,
     MELON : 20
 };
+// the score that the player get from different preys
 const Score = {
     PEAR : 5,
     APPLE : 5,
@@ -319,6 +333,7 @@ const Score = {
     BIG_TWO : 100,
     BIG_ONE : 100
 };
+// the HP of different preys
 const Hp = {
     PEAR :1.0,
     APPLE : 1.0,
@@ -331,6 +346,7 @@ const Hp = {
     BIG_TWO : 3.0,
     BIG_ONE : 3.0
 };
+// the capture probability of different preys
 const CaptureProbability = {
     PEAR :1.0,
     APPLE : 1.0,
@@ -343,21 +359,25 @@ const CaptureProbability = {
     BIG_TWO : 0.2,
     BIG_ONE : 0.2
 };
+// the damage of different kinds of nets
 const Damage = {
     SMALL_NET : 2.0,
     MEDIUM_NET : 3.0,
     LARGE_NET : 5.0
 };
+// the score consumption of different kinds of nets
 const ScoreConsumption = {
     SMALL_NET : 2,
     MEDIUM_NET : 5,
     LARGE_NET : 10
 };
+// the required rank of player when using different kinds of nets
 const RequiredRank = {
     SMALL_NET : 1,
     MEDIUM_NET : 2,
     LARGE_NET : 4
 };
+// the speed of different kinds of nets
 const NetSpeed = {
     SMALL_NET : 150.0,
     MEDIUM_NET : 150.0,
